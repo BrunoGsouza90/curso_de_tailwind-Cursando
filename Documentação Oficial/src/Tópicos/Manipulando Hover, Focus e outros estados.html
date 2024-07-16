@@ -6,7 +6,7 @@
     <title>Manipulando Hover, Focus e outros estados</title>
     <link rel="stylesheet" href="output.css">
 </head>
-<body class="bg-blue-200">
+<body>
 
     <!-- Para adicionar Focus ao entrar no botão utilize
             o "hover" .-->
@@ -16,6 +16,8 @@
     ">
         Botão com focus ao entrar
     </button>
+
+    <br><br>
 
     <!-- Para alterar nas tabelas as linhas de cor utilize 
             "even" e "odd" .-->
@@ -46,43 +48,147 @@
         </tbody>
     </table>
 
-    <button class="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-blue-700">
-        Botão com focus ao entrar e ao clicar
-    </button>
+    <br>
+
+    <!-- Aplicando o Hover em situações onde o botão preciso ser ativado. -->
     <button class="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-blue-700">
         Botão com focus ao entrar e ao clicar
     </button>
 
+    <br><br>
+
+    <!-- Exemplificando o uso de grupos aninhados. Onde é possível estilizar
+            listas com hover. -->
     <ul role="list">
-        {#each people as person}
-          <li class="group/item hover:bg-slate-100 ...">
-            <img src="{person.imageUrl}" alt="" />
-            <div>
-              <a href="{person.url}">Alex</a>
-              <p>Médico</p>
+        <li class="group/item even:bg-red-50 odd:bg-gray-200">
+            <!--Posso colocar imagem aqui.-->
+            <div class="p-4">
+                <h1 class="text-4xl">Python</h1>
+                <p>É uma ótima linguagem de progamação</p>
             </div>
-            <a class="group/edit invisible hover:bg-slate-200 group-hover/item:visible ..." href="tel:{person.phone}">
-              <span class="group-hover/edit:text-gray-700 ...">Call</span>
-              <svg class="group-hover/edit:translate-x-0.5 group-hover/edit:text-slate-500 ...">
-              </svg>
+            <a class="group/edit invisible hover:bg-slate-200 group-hover/item:visible p-2" href="tel:1234567890">
+                <span class="group-hover/edit:text-gray-700">Clique aqui para estudar</span>
+                <svg class="group-hover/edit:translate-x-0.5 group-hover/edit:text-slate-500 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h7m4 0h7m-9 0v9m0-9H7m0 0V7m4-4l5 5-5 5m0 0v3m4-4l5-5-5-5"></path>
+                </svg>
             </a>
-          </li>
-        {/each}
-      </ul>
-      <br>
-      <hr>
-      <fieldset class="border-2 border-black">
+        </li>
+
+        <li class="group/item even:bg-red-50 odd:bg-gray-200">
+            <!--Posso colocar imagem aqui.-->
+            <div class="p-4">
+                <h1 class="text-4xl">JavaScript</h1>
+                <p>É uma ótima linguagem de progamação</p>
+            </div>
+            <a class="group/edit invisible hover:bg-slate-200 group-hover/item:visible p-2" href="tel:1234567890">
+                <span class="group-hover/edit:text-gray-700">Clique aqui para estudar</span>
+                <svg class="group-hover/edit:translate-x-0.5 group-hover/edit:text-slate-500 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h7m4 0h7m-9 0v9m0-9H7m0 0V7m4-4l5 5-5 5m0 0v3m4-4l5-5-5-5"></path>
+                </svg>
+            </a>
+        </li>
+
+        <li class="group/item even:bg-red-50 odd:bg-gray-200">
+            <!--Posso colocar imagem aqui.-->
+            <div class="p-4">
+                <h1 class="text-4xl">C++</h1>
+                <p>É uma ótima linguagem de progamação</p>
+            </div>
+            <a class="group/edit invisible hover:bg-slate-200 group-hover/item:visible p-2" href="tel:1234567890">
+                <span class="group-hover/edit:text-gray-700">Clique aqui para estudar</span>
+                <svg class="group-hover/edit:translate-x-0.5 group-hover/edit:text-slate-500 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h7m4 0h7m-9 0v9m0-9H7m0 0V7m4-4l5 5-5 5m0 0v3m4-4l5-5-5-5"></path>
+                </svg>
+            </a>
+        </li>
+
+        <li class="group/item even:bg-red-50 odd:bg-gray-200">
+            <!--Posso colocar imagem aqui.-->
+            <div class="p-4">
+                <h1 class="text-4xl">Ruby</h1>
+                <p>É uma ótima linguagem de progamação</p>
+            </div>
+            <a class="group/edit invisible hover:bg-slate-200 group-hover/item:visible p-2" href="tel:1234567890">
+                <span class="group-hover/edit:text-gray-700">Clique aqui para estudar</span>
+                <svg class="group-hover/edit:translate-x-0.5 group-hover/edit:text-slate-500 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h7m4 0h7m-9 0v9m0-9H7m0 0V7m4-4l5 5-5 5m0 0v3m4-4l5-5-5-5"></path>
+                </svg>
+            </a>
+        </li>
+    </ul>
+
+    <br>
+
+    <!-- Aplicando estilos e mensagens em checkbox onde as mensagens
+            são ativas.-->
+    <fieldset class="border-2 border-black">
         <legend class="text-lg font-semibold">Testando alternação de mensagem em Tailwind</legend>
-      
+        
         <input type="radio" id="primeiro" class="peer/primeiro" name="status" checked>
-        <label for="primeiro" class="peer-checked:text-sky-500">Primeiro</label>
-      
+        <label for="primeiro" class="peer-checked/primeiro:text-sky-500">Primeiro</label>
+        
         <input type="radio" id="segundo" class="peer/segundo" name="status">
-        <label for="segundo" class="peer-checked:text-sky-500">Segundo</label>
-      
+        <label for="segundo" class="peer-checked/segundo:text-sky-500">Segundo</label>
+        
         <div id="msg_primeiro" class="hidden peer-checked/primeiro:block mt-2 text-green-600">Primeiro botão ativo.</div>
         <div id="msg_segundo" class="hidden peer-checked/segundo:block mt-2 text-green-600">Segundo botão ativo.</div>
-      </fieldset>
-        
+    </fieldset>
+
+    <br>
+    
+    <!-- Aplicando mensagens para campos obrigatórios.-->
+    <form class="space-y-4">
+        <div>
+            <label for="username" class="block">Usuário:</label>
+            <input id="username" name="username" type="text" class="peer border-2 border-black w-full" required />
+            <div class="hidden peer-invalid:block text-red-600">Nome de usuário obrigatório.</div>
+        </div>
+    
+        <div>
+            <label for="password" class="block">Senha:</label>
+            <input id="password" name="password" type="password" class="peer border-2 border-black w-full" required />
+            <div class="hidden peer-invalid:block text-red-600">Senha obrigatória</div>
+        </div>
+    
+        <button type="submit" class="border-2 border-black p-2 rounded-full">Login</button>
+    </form>
+
+    <br>
+    
+    <!-- Aplicando estilos em grupos de uma lista.-->
+    <div>
+        <h2>Categories<h2>
+        <ul class="*:rounded-full *:border *:border-sky-100 *:bg-sky-50 *:px-2 *:py-0.5 dark:text-sky-300 dark:*:border-sky-500/15 dark:*:bg-sky-500/10 *:mt-3 w-1/6 *:text-center">
+            <li>Sales</li>
+            <li>Marketing</li>
+            <li>SEO</li>
+        </ul>
+    </div>
+
+    <br>
+
+    <!-- Criação de uma lista de check personalizada usando checked.-->
+    <div class="w-1/4 ">
+        <label name="check" for="google">
+            <div class="p-4 bg-gray-200 rounded-lg has-[:checked]:bg-blue-100 has-[:checked]:border has-[:checked]:border-blue-500">
+                <label for="google">Google Pay</label>
+                <input name="check" id="google" value="google" type="radio" class="box-content h-1.5 w-1.5 appearance-none rounded-full border-[5px] border-white bg-white bg-clip-padding outline-none ring-1 ring-gray-950/10 checked:border-indigo-500 checked:ring-indigo-500 flex ml-auto -mt-4" checked="">
+            </div>
+        </label>
+        <label name="check" for="apple">
+            <div class="p-4 bg-gray-200 rounded-lg has-[:checked]:bg-blue-100 has-[:checked]:border has-[:checked]:border-blue-500">
+                <label for="apple">Apple Pay</label>
+                <input name="check" id="apple" value="google" type="radio" class="box-content h-1.5 w-1.5 appearance-none rounded-full border-[5px] border-white bg-white bg-clip-padding outline-none ring-1 ring-gray-950/10 checked:border-indigo-500 checked:ring-indigo-500 flex ml-auto -mt-4" checked="">
+            </div>
+        </label>
+        <label name="check" for="credito">
+            <div class="p-4 bg-gray-200 rounded-lg has-[:checked]:bg-blue-100 has-[:checked]:border has-[:checked]:border-blue-500">
+                <label for="credito">Cartão de Crédito</label>
+                <input name="check" id="credito" value="credito" type="radio" class="box-content h-1.5 w-1.5 appearance-none rounded-full border-[5px] border-white bg-white bg-clip-padding outline-none ring-1 ring-gray-950/10 checked:border-indigo-500 checked:ring-indigo-500 flex ml-auto -mt-4" checked="">
+            </div>
+        </label>
+    </div>
+
+
 </body>
 </html>
